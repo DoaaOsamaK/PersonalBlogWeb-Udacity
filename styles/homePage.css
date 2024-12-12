@@ -1,0 +1,266 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #333333;
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #d28903;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-height: 100vh; /* Limit the height to the image's height */
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-section-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Ensure text stays aligned */
+    color: white; /* Keep text color clear on image */
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 18px;
+}
+
+/* Main Section Styles */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 50px;
+}
+
+.posts-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.posts-card:hover {
+    transform: translateY(-5px);
+}
+
+.posts-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.posts-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-style: italic;
+    color: #333;
+}
+
+.posts-card p {
+    padding: 0 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.posts-card figcaption {
+    font-size: 14px;
+    color: #777;
+}
+
+.posts-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d28903;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.posts-card button:hover {
+    background-color: #555;
+}
+
+.posts-card button a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+footer .footer-text h2 {
+    font-size: 22px;
+}
+
+footer .footer-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+footer .footer-form {
+    margin-bottom: 20px;
+}
+
+footer .footer-form input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer .footer-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #d28903;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer .footer-form button:hover {
+    background-color: #777;
+}
+
+.social-media a {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    text-decoration: none;
+    color: #777;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media a i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.social-media a:hover {
+    color: #d28903; 
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section h1 {
+        font-size: 24px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    main {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    footer .footer-form input, 
+    footer .footer-form button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    header nav ul li {
+        margin: 5px;
+    }
+
+    footer .footer-form input,
+    footer .footer-form button {
+        width: 100%;
+    }
+
+    .posts-card h2 {
+        font-size: 16px;
+    }
+
+    .posts-card p {
+        font-size: 12px;
+    }
+
+    .social-media a {
+        font-size: 14px;
+    }
+}
